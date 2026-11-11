@@ -73,8 +73,8 @@ Contents
 # IDRA Doctrine
 
 **Invariant-Driven Reasoning Architecture**\
-**Status:** Proposed authoritative doctrine — pending human approval\
-**Version:** 1.1-draft\
+**Status:** Approved authoritative doctrine — approved by the designated human authority on 2026-11-10\
+**Version:** 1.1\
 **Scope:** Software engineering undertaken under IDRA, including work performed by human developers and autonomous engineering agents\
 **Implementation language:** Rust
 
