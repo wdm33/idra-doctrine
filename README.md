@@ -16,7 +16,7 @@ When agents write and review much of the code, a passing test, a plausible imple
 |---|---|
 | **1. Invariant-Driven Correctness & Determinism** | Correctness is defined before features are written, as one-line, falsifiable invariants that a designated human approves one by one. Each has a family, a functional domain and an assurance level from L1 (baseline) to L3 (high assurance). The same ordered inputs always produce byte-identical state. |
 | **2. Isolated Functional Core & Versioned Boundaries** | Every authoritative decision is made in a deterministic `no_std` Rust core that performs no I/O. A separate shell handles everything that touches the outside world. Each module is BLUE (core), GREEN (deterministic support) or RED (shell). Interfaces are closed and versioned, and a failure that threatens correctness halts processing instead of being hidden or retried. |
-| **3. Mechanical Enforcement & Empirical Proof** | Every invariant has a check that actually runs. For L2 and L3 invariants, the check must be shown to fail on a deliberate violation. Completion claims need reproducible evidence tied to an exact commit, and a cluster of work closes only after independent architecture and security reviews by Claude and Codex leave no blocking finding. |
+| **3. Mechanical Enforcement & Empirical Proof** | Every invariant has an enforcement mechanism and an argument for why it holds on every authoritative path, substantiated by checks that actually run. L2 and L3 arguments are challenged with methods suited to their risks, including deliberate violations where those establish a critical premise. The verification a cluster needs is agreed before implementation; it closes only when those obligations are met, its exit criteria pass with reproducible evidence tied to an exact commit, and independent architecture and security reviews by Claude and Codex leave no blocking finding: an actual defect or a materially unsupported claim. |
 | **4. Human-Gated Multi-Agent Governance & Compliance** | Claude and Codex must agree on how each piece of work preserves its invariants before code is written. Agents may draft, propose and implement. Only the designated human approves the concept, the plan and the invariants, moves the core boundary, lowers assurance, resolves escalations or changes the doctrine. Silence and agent consensus never count as approval. |
 
 ## How work flows
@@ -39,12 +39,12 @@ A project names its human authority, pins the doctrine version and sha256 it fol
 | | |
 |---|---|
 | File | `IDRA Doctrine.md` |
-| Version | 1.1 |
-| Status | Approved by the designated human authority on 2026-11-10 |
-| sha256 | `b367ad21498038ac616a75fb8324dcd765265de803da020e4cf8ba18488789c4` |
+| Version | 1.2 |
+| Status | Approved by the designated human authority on 2026-11-12 |
+| sha256 | `84d887aae0ae433daa48255366f2ab40931dcfeee283f4f1be0c9de17a1cdfab` |
 
 `IDRA Doctrine.md` is the single authority for IDRA obligations (IDRA-4.7). Nothing else in this repository adds to, removes from or reinterprets it. The approval and change record is `~/.claude/methodology/idra-doctrine.toml`, and projects pin the version and sha256 in their `.idra-config.json`.
 
 ## Changing the doctrine
 
-Every change is a new version: edit `IDRA Doctrine.md`, get human approval of the exact text, record the approval in `idra-doctrine.toml`, commit it here, and move the superseded text into `archive/`.
+Every change is a new version. Draft it under `drafts/`, never in `IDRA Doctrine.md` itself, because projects' pin checks hash that file. Get human approval of the exact text, and record the approval in `idra-doctrine.toml`. Install it as `IDRA Doctrine.md` once the methodology and tooling are reconciled, move the superseded text into `archive/`, and commit here. Projects then move their pins by recorded decisions.

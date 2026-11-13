@@ -1,6 +1,6 @@
 # IDRA 1.2 change request
 
-**Record status:** Approved by the designated human authority (wdm33) on 2026-11-12. **Not yet in force:** it takes effect when the approved text is installed as `IDRA Doctrine.md`, after Phase 2 (see Effective boundary).
+**Record status:** Approved by the designated human authority (wdm33) on 2026-11-12. Installed as `IDRA Doctrine.md` on 2026-11-12 after the tooling reconciliation (`~/.claude` ff6074d); the approved text is that file, and the draft is `archive/IDRA_Doctrine_1.2-draft.md`. It takes effect for each project when that project's pin moves.
 **Opened:** 2026-11-12
 **Draft:** `drafts/IDRA_Doctrine_1.2-draft.md`, sha256 `3ac0caaa60b4764101722acce8cac3340030f6e751781b05079116e2704a4b2d` (Claude ↔ Codex consensus, round 2; see `IDRA_1.2_Change_Request.consensus.md`)
 **Approved text:** `drafts/IDRA_Doctrine_1.2.md`, sha256 `84d887aae0ae433daa48255366f2ab40931dcfeee283f4f1be0c9de17a1cdfab`; the draft with only its Status and Version lines changed
